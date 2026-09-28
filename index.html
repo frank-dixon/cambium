@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F3EEE4" />
+  <meta name="description" content="Cambium — tree physiology PWA: sugar maple sap run, tap, and leaf-out, plus how apple, peach, orange, and grape make fruit. Simple and Advanced." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Cambium" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/cambium.css" />
+  <title>Cambium — tree physiology</title>
+</head>
+<body class="bg-paper text-ink" data-depth="simple">
+  <a class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:bg-teal focus:text-teal-on focus:px-3 focus:py-2 focus:font-semibold" href="#main">Skip to content</a>
+
+  <header class="border-b border-rule bg-paper-soft/90 backdrop-blur-md sticky top-0 z-50">
+    <div class="w-[min(1120px,calc(100%-2rem))] mx-auto flex items-center justify-between gap-4 py-[1.15rem] flex-wrap">
+      <a class="font-display font-bold text-[0.95rem] tracking-tight text-ink no-underline" href="https://frank-dixon.github.io/">Frank Dixon<span class="text-teal">.</span></a>
+      <nav aria-label="Frank Dixon site">
+        <ul class="list-none m-0 p-0 flex gap-x-[1.35rem] gap-y-[0.35rem] flex-wrap">
+          <li><a class="hub-link" href="https://frank-dixon.github.io/#about">About</a></li>
+          <li><a class="hub-link" href="https://frank-dixon.github.io/#work">Work</a></li>
+          <li><a class="hub-link" href="https://frank-dixon.github.io/#projects">Projects</a></li>
+          <li><a class="hub-link" href="https://frank-dixon.github.io/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <header class="border-b border-rule">
+    <div class="w-[min(1120px,calc(100%-2rem))] mx-auto py-6 flex items-end justify-between gap-4 flex-wrap">
+      <div>
+        <p class="m-0 font-mono text-[0.7rem] font-medium tracking-[0.1em] uppercase text-muted">Tree physiology</p>
+        <h1 class="m-0 mt-1 font-display font-bold text-[clamp(1.75rem,4vw,2.35rem)] tracking-tight text-ink">Cambium</h1>
+        <p class="m-0 mt-2 text-ink-soft max-w-[42ch] leading-relaxed">How sugar maple moves sap—and how common fruit trees actually make fruit. Not a pruning guide.</p>
+      </div>
+      <div class="inline-flex rounded-full border border-rule bg-paper/80 p-0.5 shadow-sm" role="group" aria-label="Reading depth">
+        <button type="button" class="depth-btn rounded-full px-3.5 py-1.5 text-[0.8rem] font-medium text-muted border-0 bg-transparent cursor-pointer" data-depth="simple" aria-pressed="true">Simple</button>
+        <button type="button" class="depth-btn rounded-full px-3.5 py-1.5 text-[0.8rem] font-medium text-muted border-0 bg-transparent cursor-pointer" data-depth="advanced" aria-pressed="false">Advanced</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="w-[min(1120px,calc(100%-2rem))] mx-auto py-5 flex flex-col gap-4">
+    <div>
+      <p class="m-0 mb-2 font-mono text-[0.65rem] uppercase tracking-wider text-muted">Sugar maple</p>
+      <div class="flex flex-wrap gap-2" role="group" aria-label="Maple modes">
+        <button type="button" data-mode="maple-sap" class="mode-btn rounded-full border border-rule bg-paper-soft text-ink-soft text-[0.8rem] px-3.5 py-1.5 cursor-pointer hover:border-teal/50" aria-pressed="true">Sap run</button>
+        <button type="button" data-mode="maple-tap" class="mode-btn rounded-full border border-rule bg-paper-soft text-ink-soft text-[0.8rem] px-3.5 py-1.5 cursor-pointer hover:border-teal/50" aria-pressed="false">Tap</button>
+        <button type="button" data-mode="maple-leaf" class="mode-btn rounded-full border border-rule bg-paper-soft text-ink-soft text-[0.8rem] px-3.5 py-1.5 cursor-pointer hover:border-teal/50" aria-pressed="false">Leaf-out</button>
+      </div>
+    </div>
+    <div>
+      <p class="m-0 mb-2 font-mono text-[0.65rem] uppercase tracking-wider text-muted">Fruit trees — how fruit forms</p>
+      <div class="flex flex-wrap gap-2" role="group" aria-label="Fruit modes">
+        <button type="button" data-mode="apple" class="mode-btn rounded-full border border-rule bg-paper-soft text-ink-soft text-[0.8rem] px-3.5 py-1.5 cursor-pointer hover:border-teal/50" aria-pressed="false">Apple</button>
+        <button type="button" data-mode="peach" class="mode-btn rounded-full border border-rule bg-paper-soft text-ink-soft text-[0.8rem] px-3.5 py-1.5 cursor-pointer hover:border-teal/50" aria-pressed="false">Peach</button>
+        <button type="button" data-mode="orange" class="mode-btn rounded-full border border-rule bg-paper-soft text-ink-soft text-[0.8rem] px-3.5 py-1.5 cursor-pointer hover:border-teal/50" aria-pressed="false">Orange</button>
+        <button type="button" data-mode="grape" class="mode-btn rounded-full border border-rule bg-paper-soft text-ink-soft text-[0.8rem] px-3.5 py-1.5 cursor-pointer hover:border-teal/50" aria-pressed="false">Grape</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main" class="w-[min(1120px,calc(100%-2rem))] mx-auto pb-10">
+    <article class="rounded-[1rem] border border-rule bg-paper-soft/90 shadow-sm overflow-hidden">
+      <div class="px-5 py-5 sm:px-8 sm:py-7">
+        <p id="panel-label" class="m-0 font-mono text-[0.65rem] uppercase tracking-wider text-teal-deep">Sugar maple</p>
+        <h2 id="panel-title" class="m-0 mt-1 font-display font-semibold text-[clamp(1.35rem,3vw,1.85rem)] text-ink">Sugar maple sap run</h2>
+        <p id="panel-latin" class="m-0 mt-1 font-mono text-[0.8rem] text-muted italic">Acer saccharum</p>
+        <div id="panel-body" class="mt-5"></div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="border-t border-rule bg-paper-soft/80">
+    <div class="w-[min(1120px,calc(100%-2rem))] mx-auto py-8">
+      <h2 class="m-0 font-display font-semibold text-lg text-ink">Sources</h2>
+      <p class="mt-2 mb-4 text-[0.9rem] text-muted max-w-[60ch]">Notes below are starting points. Mechanisms are simplified for teaching; check primary literature and current extension guides before field decisions.</p>
+      <ul id="sources-list" class="m-0 pl-5"></ul>
+      <p class="mt-6 text-[0.8rem] text-muted">Cambium complements Crownwork (pruning)—this project is physiology only. <a class="text-teal-deep underline underline-offset-2" href="https://github.com/frank-dixon/cambium">Source</a></p>
+    </div>
+  </footer>
+
+  <script src="./js/content.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</body>
+</html>

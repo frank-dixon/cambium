@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply m-0 min-h-screen bg-paper text-ink font-sans text-[15px] antialiased;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  .hub-link {
+    @apply text-muted text-[0.82rem] font-medium no-underline hover:text-ink;
+  }
+  .mode-btn[aria-pressed="true"] {
+    @apply bg-teal text-teal-on border-teal font-semibold shadow-sm;
+  }
+  .depth-btn[aria-pressed="true"] {
+    @apply bg-paper-soft text-teal shadow-sm;
+  }
+  .adv-only {
+    @apply hidden;
+  }
+  body[data-depth="advanced"] .adv-only {
+    @apply block;
+  }
+  body[data-depth="advanced"] .simple-only {
+    @apply hidden;
+  }
+}
