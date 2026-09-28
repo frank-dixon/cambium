@@ -1,4 +1,4 @@
-/** Cambium — cream/paper + ink + turquoise */
+/** Cambium — brighter cream/paper + readable ink + turquoise accent */
 module.exports = {
   content: ["./index.html", "./src/js/**/*.js"],
   safelist: [
@@ -29,20 +29,21 @@ module.exports = {
     extend: {
       colors: {
         paper: {
-          DEFAULT: "#F3EEE4",
-          soft: "#F8F3EA",
-          2: "#E8E0D2",
+          DEFAULT: "#FFFBF5",
+          soft: "#FFFFFF",
+          2: "#F3EDE3",
         },
         ink: {
-          DEFAULT: "#1C1916",
-          soft: "#3F3A35",
+          DEFAULT: "#1A1613",
+          soft: "#3A342E",
         },
-        muted: "#6A635B",
-        rule: "#D4CBBE",
+        muted: "#6B645C",
+        rule: "#E4DCD0",
         teal: {
           DEFAULT: "#0B8A8F",
           deep: "#087075",
-          on: "#F8F3EA",
+          on: "#FFFBF5",
+          soft: "#E6F5F5",
         },
       },
       fontFamily: {

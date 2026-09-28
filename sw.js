@@ -1,5 +1,5 @@
 /* Cambium service worker — cache shell for offline teaching pages. */
-const CACHE = "cambium-v1";
+const CACHE = "cambium-v2";
 const ASSETS = [
   "./",
   "./index.html",

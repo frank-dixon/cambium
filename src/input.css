@@ -4,10 +4,10 @@
 
 @layer base {
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth bg-paper;
   }
   body {
-    @apply m-0 min-h-screen bg-paper text-ink font-sans text-[15px] antialiased;
+    @apply m-0 min-h-screen bg-paper text-ink font-sans text-[16px] leading-relaxed antialiased;
   }
   @media (prefers-reduced-motion: reduce) {
     html {
@@ -20,19 +20,17 @@
   .hub-link {
     @apply text-muted text-[0.82rem] font-medium no-underline hover:text-ink;
   }
+  /* Selected modes: teal soft fill + ink text — avoid heavy dark teal blocks */
   .mode-btn[aria-pressed="true"] {
-    @apply bg-teal text-teal-on border-teal font-semibold shadow-sm;
+    @apply bg-teal-soft text-teal-deep border-teal font-semibold shadow-sm;
   }
   .depth-btn[aria-pressed="true"] {
-    @apply bg-paper-soft text-teal shadow-sm;
+    @apply bg-white text-teal-deep shadow-sm border border-teal/30;
   }
   .adv-only {
     @apply hidden;
   }
   body[data-depth="advanced"] .adv-only {
     @apply block;
-  }
-  body[data-depth="advanced"] .simple-only {
-    @apply hidden;
   }
 }
