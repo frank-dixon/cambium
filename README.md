@@ -6,7 +6,7 @@ Simple ↔ Advanced depth. Complements **Crownwork** (pruning)—this repo does 
 
 ## Live demo
 
-Not on GitHub Pages until Frank explicitly says deploy/ship.
+**https://frank-dixon.github.io/cambium/**
 
 ## Stack
 
@@ -43,4 +43,4 @@ Not a pruning tool (see Crownwork). Not a commercial sugarbush manual. Fruit mod
 
 ## Deploy
 
-Push for review is fine. **Do not enable GitHub Pages or ship publicly until Frank says deploy/ship.**
+Portfolio micro-projects: commit, push, and keep GitHub Pages on `main` `/` (auto-deploy on push).
